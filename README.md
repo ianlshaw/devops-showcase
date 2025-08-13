@@ -9,9 +9,12 @@ This project demonstrates a highly available web application deployed to AWS usi
 
 ### How to run it
 - Configure AWS CLI
-`terraform init`
-`terraform plan -out=planfile`
-`terraform apply planfile`
+- change directory to packer
+- run `packer build`
+- change directory to terraform-aws-infra
+- run `terraform init`
+- run `terraform plan -out=planfile`
+- run `terraform apply planfile`
 
 - Copy loadbalancer_public_dns from the output into the address bar of your browser.
 - Press return
