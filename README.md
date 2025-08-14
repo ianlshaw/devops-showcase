@@ -7,8 +7,10 @@ This project demonstrates a highly available web application deployed to AWS usi
 - Load balancer
 - Auto scaling group
 
+![title](asg.png)
+
 ### How to run it
-- Configure AWS CLI
+- Configure AWS CLI with `aws configure`
 - change directory to packer
 - run `packer build`
 - change directory to terraform-aws-infra
@@ -23,13 +25,15 @@ You will see "Hello, World!".
 
 This is a flask web application running a minimal configuration. Prepared using packer here.
 
-The application runs on an ec2 instance, which uses an AMI created using packer.
+The application runs on ec2 instances, which uses an AMI created by packer.
 
-The ec2 instance is part of an autoscaling group, which is configured to deploy to two private subnets.
+The ec2 instances are part of an autoscaling group, which is configured to deploy to two private subnets.
 
 The load balancer is associated with two public subnets.
 
 Those two public subnets are associated with a route table which contains a route which allows communication to the internet via an internet gateway.
+
+There is a route table which enables communication between the private and public subnets.
 
 Application traffic is not set over the internet.
 
