@@ -2,17 +2,18 @@
 
 My name is Ian Shaw
 
+I have experience in cloud infrastructure design, deployment and maintanance.
+
+This repository serves as my portfolio, demonstrating some of my capabilities as a DevOps Enginer.
 
 This project demonstrates a highly available web application deployed to AWS using terraform.
-- Load balancer
-- Auto scaling group
 
 ![title](asg.png)
 
 ### How to run it
 - Configure AWS CLI with `aws configure`
 - change directory to packer
-- run `packer build`
+- run `packer build .`
 - change directory to terraform-aws-infra
 - run `terraform init`
 - run `terraform plan -out=planfile`
@@ -23,9 +24,15 @@ This project demonstrates a highly available web application deployed to AWS usi
 
 You will see "Hello, World!".
 
-This is a flask web application running a minimal configuration. Prepared using packer here.
+This is a flask web application running a minimal configuration. Prepared using packer.
 
-The application runs on ec2 instances, which uses an AMI created by packer.
+The architecture utilized both auto-scaling groups as well as a load balancer.
+
+This provides high-availability by provisioning ec2 hosts in at least two availability zones.
+
+It also provides elasticity, as the auto scaling group can expand and contract depending on usage.
+
+The application runs on ec2 instances, which use an AMI created by packer.
 
 The ec2 instances are part of an autoscaling group, which is configured to deploy to two private subnets.
 
