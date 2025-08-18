@@ -16,7 +16,7 @@ This project demonstrates a highly available web application deployed to AWS usi
 
 This is a flask web application running a minimal configuration. Prepared using packer.
 
-The architecture utilized both auto-scaling groups as well as a load balancer.
+The architecture uses both auto-scaling groups as well as a load balancer.
 
 This provides high-availability by provisioning ec2 hosts in at least two availability zones.
 
@@ -32,7 +32,7 @@ Those two public subnets are associated with a route table which contains a rout
 
 There is a route table which enables communication between the private and public subnets.
 
-Application traffic is not set over the internet.
+Application traffic is not sent over the internet.
 
 Application traffic flows on port 5000 from the ec2 instances to the load balancer only.
 
