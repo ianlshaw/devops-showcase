@@ -58,8 +58,11 @@ You will see "Hello, World!".
 - run `terraform destroy`
 
 ## Key learnings
+- I have chosen to manually create vpc resources rather than use the commonly used vpc module. 
+- It is of critical importance to ensure that the private subnet is actually private. Only the public subnets should have routes which allow communication over the internet
 
 
-
-### TODO
-network ACL restrict private subnet traffic to application traffic from load balancer
+## TODO
+- network ACL restrict private subnet traffic to application traffic from load balancer
+- refactor all values into data.tf
+- make this whole pattern into a module which can be called with as little input data as possible
