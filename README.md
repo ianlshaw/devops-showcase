@@ -1,28 +1,18 @@
 # devops-showcase
 
+## Overview
+
 My name is Ian Shaw
 
-I have experience in cloud infrastructure design, deployment and maintanance.
+I have experience in cloud infrastructure design, deployment and maintenance.
 
 This repository serves as my portfolio, demonstrating some of my capabilities as a DevOps Enginer.
 
 This project demonstrates a highly available web application deployed to AWS using terraform.
 
+## Architecture
+
 ![title](asg.png)
-
-### How to run it
-- Configure AWS CLI with `aws configure`
-- change directory to packer
-- run `packer build .`
-- change directory to terraform-aws-infra
-- run `terraform init`
-- run `terraform plan -out=planfile`
-- run `terraform apply planfile`
-
-- Copy loadbalancer_public_dns from the output into the address bar of your browser.
-- Press return
-
-You will see "Hello, World!".
 
 This is a flask web application running a minimal configuration. Prepared using packer.
 
@@ -47,6 +37,29 @@ Application traffic is not set over the internet.
 Application traffic flows on port 5000 from the ec2 instances to the load balancer only.
 
 This is enforced by security group rules.
+
+## Deployment Instructions
+
+- Configure AWS CLI with `aws configure`
+- change directory to packer
+- run `packer build .`
+- change directory to terraform-aws-infra
+- run `terraform init`
+- run `terraform plan -out=planfile`
+- run `terraform apply planfile`
+
+- Copy loadbalancer_public_dns from the output into the address bar of your browser.
+- Press return
+
+You will see "Hello, World!".
+
+## Cleanup Instructions
+
+- run `terraform destroy`
+
+## Key learnings
+
+
 
 ### TODO
 network ACL restrict private subnet traffic to application traffic from load balancer
