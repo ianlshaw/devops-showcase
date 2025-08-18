@@ -41,14 +41,14 @@ This is enforced by security group rules.
 ## Deployment Instructions
 
 - Configure AWS CLI with `aws configure`
-- change directory to packer
+- change directory to `packer`
 - run `packer build .`
-- change directory to terraform-aws-infra
+- change directory to `terraform-aws-infra`
 - run `terraform init`
 - run `terraform plan -out=planfile`
 - run `terraform apply planfile`
 
-- Copy loadbalancer_public_dns from the output into the address bar of your browser.
+- Copy `loadbalancer_public_dns` from the output into the address bar of your browser.
 - Press return
 
 You will see "Hello, World!".
