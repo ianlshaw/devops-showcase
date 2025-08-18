@@ -6,7 +6,7 @@ My name is Ian Shaw
 
 I have experience in cloud infrastructure design, deployment and maintenance.
 
-This repository serves as my portfolio, demonstrating some of my capabilities as a DevOps Enginer.
+This repository serves as my portfolio, demonstrating some of my capabilities as a DevOps Engineer.
 
 This project demonstrates a highly available web application deployed to AWS using terraform.
 
